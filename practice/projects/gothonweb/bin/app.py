@@ -6,14 +6,14 @@ urls = (
 
 app = web.application(urls, globals())
 
-render = web.template.render('templates/')
+render = web.template.render('templates/', base="layout")
 
 class Index(object):
     def GET(self):
 	return render.hello_form()
 
     def POST(self):
-        form = web.input(name="mahaocheng", greet="hello")
+        form = web.input(name="Nobody", greet="hello")
 	greeting = " %s, %s" % (form.greet,form.name)
 	return render.foo(greeting = greeting)
 
