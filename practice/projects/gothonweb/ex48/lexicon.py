@@ -16,7 +16,7 @@ def analyse(word):
     rules = {
         "direction": ['north', 'south', 'east', 'west', 'down', 'up', 'left', 'right', 'back'],
         "verb": ['go', 'stop', 'kill', 'eat'],
-        "stop": ['the', 'in', 'of', 'from', 'at', 'it'],
+        "stop": ['the', 'to', 'in', 'of', 'from', 'at', 'it'],
         "noun": ['door', 'bear', 'princess', 'carbinet']
         }
     
