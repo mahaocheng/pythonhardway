@@ -1,17 +1,22 @@
-$def with (room)
+$def with (room, name)
 
-<hl> $room.name </hl>
+<h1> $room.name </h1>
 
-<pre>
+<blockquote class="content-quote">
 $room.description
-</pre>
+</blockquote>
 
 $if room.name == "death":
     <p><a href="/">Play Again?</a></p>
 $else:
-    <p>
+    <h1>Action</h1>
     <form action="/game" method="POST">
-        - <input type="text" name="action"> <input type="SUBMIT">
+      <div class="pure-form">
+        <fieldset>
+          <legend>$name, please type your action on what to do:</legend>
+          <input type="text" name="action"/>
+          <input class="pure-button pure-button-primary"  type="submit"/>
+        </fieldset>
+      </div>
     </form>
-    </p>
 
